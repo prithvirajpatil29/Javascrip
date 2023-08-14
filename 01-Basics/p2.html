@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+   
+</head>
+<body>
+    <center>
+        <h1>JS-Variable..!</h1>
+    </center>
+    <hr>
+
+    <pre>
+        DataType
+        1) Primitive Datatypes
+        2) Non-primitive Datatypes
+    
+    1) Primitive Datatypes
+     - Int (integer)
+     - Float
+     - Boolean
+     - char
+     - void
+
+    2) Non-primitive / Derived Datatypes
+     - Array
+     - Structure
+     - Union
+     - Enum
+     - Pointer
+     - Function
+    </pre>
+    <hr>
+    <script>
+        // var, let and const are used to declare varaible
+        var firstnumber;
+        document.write(firstnumber,"<br>");
+        document.write("<b>Without value :</b> ",firstnumber,"<br><hr>");
+
+        firstnumber = "Hello JS";
+        document.write("<b>With Value : </b>", firstnumber, "<br>");
+        document.write("<b>With Value : </b>" + firstnumber + "<br>");
+        document.write("<b>With Value : " + firstnumber + " </b><br>");
+        document.write(`With value : ${firstnumber}<br>`);
+        document.write(typeof(firstnumber), `<br><hr>`);
+
+        var secondNumber = "A";
+        document.write(typeof(secondNumber) + "<br>");
+        
+         var number = 1000;
+        document.write(typeof(number) + "<br>");
+
+        var number = 100.298392;
+        document.write(typeof(number) + "<br>");
+
+        var firstVariable = true;
+        document.write(typeof(firstVariable) + "<br>");
+
+        var secondVariable = false;
+        document.write(typeof(secondVariable) + "<br>");
+    </script>
+</body>
+</html>

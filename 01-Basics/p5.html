@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript generating output..!</h1>
+    </center>
+    <hr>
+    <p id="res">Result : </p>
+    <script>
+        let num1 = 10, num2 = 20, sum;
+        sum = num1 + num2;
+        document.write(`<p><b>docume.write : ${sum}`);
+        alert("alert : " + sum);
+        confirm("Confirm : " + sum);
+        prompt("prompt : " + sum);
+        document.getElementById("res").innerHTML +=sum;
+
+    </script>
+</body>
+</html>
