@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+       <h3>Special or Terinary operators => condition ? "true":"flase";
+    </h3>
+    </center>
+    
+    <hr>
+     
+    <script>
+        let age = 18;
+        let isAdult = age >= 18 ? "Yes" : "No";
+
+        document.write("<h3> The condition ? 'true':'flase' is = " ,isAdult, "<br><hr>"); // Output: "Yes"
+
+        let x = 1;
+
+        x = (x++, x);
+
+        document.write("<h3> The comma operator alows multiple expressions that is = " ,x, "<br><hr>");
+        
+        let numbers = [1, 2, 3, 4, 5];
+        delete numbers[2];
+        document.write(`The delete operator deletes the element, the final output is = ${numbers} <br><hr>`);
+
+        let person = {
+            name: "Prithviraj",
+            age: 30,
+        };
+        document.write("email" in person  , "<br><hr>"); // Output: false
+          
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+          }
+        const auto = new Car('Honda', 'Accord', 1998);
+        document.write("The instanceof operator ",auto instanceof Car,"<br><hr>");
+
+        let employee = new Array();
+        employee[0] = "Prithviraj";
+        employee[1] = "Prajwal";
+        document.write(` The employee details are = ${employee[0]} <br><hr>`);
+
+        let firstName = "prithviraj";
+        document.write("The typeof operator = ", typeof(firstName), "<br><hr>");
+        
+        function* generateNumbers() {
+            yield 1;
+            yield 2;
+            yield 3;
+          }
+          
+          const generator = generateNumbers();
+          
+          document.write("The yield operator = ",generator.next().value); 
+          document.write(generator.next().value); 
+          document.write(generator.next().value, "<br><hr>"); 
+          
+
+    </script>
+        Void type operator :
+        <a href="javascript:void(0)">Click here to do nothing.</a>
+
+</body>
+</html>

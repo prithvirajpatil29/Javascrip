@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h3>Conditional Statements</h3>
+    </center>
+    <hr>
+    <ol>
+        <li>Simple if</li>
+        <li> if else</li>
+        <li> if else ladder</li>
+        <li> switch case</li>
+    </ol>
+    <hr>
+    <script>
+        let x = prompt("Enter the value");
+        document.write(`<h3> Type of prompt value is = ${typeof(x)} <br>`);
+        var a = Number(x);
+
+        if(a > 123)
+        {
+            document.write(`value of ${a} is greater than 123`);
+        }
+
+        else if(a<123)
+        {
+            document.write(`value of ${a} is smaller than 123`);
+        }
+        else if(a ==123)
+        {
+            document.write(`value of ${a} is equal than 123`);
+        }
+        else {
+            document.write(`Enter the value in prompt`);
+        }
+    </script>
+</body>
+</html>

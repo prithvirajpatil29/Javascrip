@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+</head>
+<body>
+    <center>
+        <h4>
+            Logical Operator => Logical AND &&, or ||, not !
+        </h4>
+    </center>
+<hr>
+    <script>
+        let age = 20;
+        if(age>18 && age<60){
+            document.write("<h3>You can apply for job <br> <hr>");
+        }
+        else {
+            document.write("You cannot apply for job")
+        }
+
+        const hasBiscuit = true;
+        const hasIceCream = false;
+
+        if (hasBiscuit || hasIceCream) {
+        document.write("We have biscuits or ice cream!<br><hr>");
+        } else {
+        document.write("We have neither buiscits nor ice cream. <br><hr>");
+        }
+
+        const a = 3;
+        const b = -2;
+
+        document.write(!(a > 0 || b > 0));
+
+    </script>
+</body>
+</html>

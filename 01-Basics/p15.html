@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>Use switch key = add, sub, multi, div, modulus</h1>
+    </center>
+    <hr>
+        <label for="Operations">
+        Select operation<select  id="operator">
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Divison</option>
+            <option value="modu">Modulus</option>
+        </select>
+        <br>
+        <br>
+        Number1<input type="number" placeholder="number1" id="num1"><br><br>
+        Number2<input type="number" placeholder="number2" id="num2"><br><br>
+        <input type="submit" onclick="cal()">
+    
+    <h3 id="result">   </h3>
+
+    <script>
+        function cal(){
+            var first = Number(document.getElementById("num1").value);
+            var second = Number(document.getElementById("num2").value);
+
+            var operator = document.getElementById("operator").value;
+            if(operator == "add"){
+                var add = first + second;
+                document.getElementById("result").innerHTML = "Addition of two numbers is = " + add;
+            }
+            else if(operator == "sub"){
+                var sub = first - second;
+                document.getElementById("result").innerHTML = "Subtraction of two numbers is = " + sub;
+            }
+            else if(operator == "mul"){
+                var multi = first * second;
+                document.getElementById("result").innerHTML = "Multiplication of two numbers is = " + multi;
+            }
+            else if(operator == "div"){
+                var div = first / second;
+                document.getElementById("result").innerHTML = "Divison of two numbers is = " + div;
+            }
+            else if(operator == "modu"){
+                var modulus = first % second;
+                document.getElementById("result").innerHTML = "Modulus of two numbers is = " + modulus;
+            }
+            else{}
+        }
+    </script>
+</body>
+</html>
