@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>marks = 70 - 100(A) 50-70(B) 35-50(C) ==35(D), Fail</h1>
+    </center>
+<hr>
+<form>
+       Kannada <input type="number" id="sub1"><br><br>
+       English <input type="number" id="sub2"><br><br>
+       Hindi <input type="number" id="sub3"><br><br>
+       Maths <input type="number" id="sub4"><br><br>
+       Science <input type="number" id="sub5"><br><br>
+       Social <input type="number" id="sub6"><br><br>
+       <input type="submit"  onclick="calc(event)"  >
+</form>
+    <h2 id="result"></h2>
+    <h2 id="percentage"></h2>
+    <script>
+        
+       function calc(event)
+        {
+           
+
+            event.preventDefault();
+            let kannada = Number(document.getElementById("sub1").value);
+            if(kannada<0 || kannada>100){
+                alert("Kannada Marks should be between 0 and 100");
+                return false;
+            }
+            let english = Number(document.getElementById("sub2").value);
+            if(english<0 || english>100){
+                alert("English Marks should be between 0 and 100");
+                return false;
+            }
+            let hindi = Number(document.getElementById("sub3").value);
+            if(hindi<0 || hindi>100){
+                alert("Hindi Marks should be between 0 and 100");
+                return false;
+            }
+            let maths = Number(document.getElementById("sub4").value);
+            if(maths<0 || maths>100){
+                alert("Maths Marks should be between 0 and 100");
+                return false;
+            }
+            let science = Number(document.getElementById("sub5").value);
+            if(science<0 || science>100){
+                alert("Science Marks should be between 0 and 100");
+                return false;
+            }
+            let social = Number(document.getElementById("sub6").value);
+            if(social<0 || social>100){
+                alert("Social Marks should be between 0 and 100");
+                return false;
+            }
+
+            let percentage;
+            let total_marks_obtainer = kannada + english + hindi + maths + science + social;
+            percentage12 = total_marks_obtainer*100;
+            percentage = percentage12/600;
+            //document.getElementById("result").innerHTML ="Percentage  = " + percentage;
+            
+            if(percentage>=70 &&  percentage<100){
+                    document.getElementById("result").innerHTML = "Grade A";
+            }
+            else if(percentage<70 && percentage>=50){
+                document.getElementById("result").innerHTML = "Grade B";
+            }
+            else if(percentage>35 && percentage<50){
+                document.getElementById("result").innerHTML = "Grade C";
+            }
+            else if(percentage==35){
+                document.getElementById("result").innerHTML = "Grade D";
+            }
+            else if(percentage<35){
+                document.getElementById("result").innerHTML = "Fail"
+            }
+            document.getElementById("percentage").innerHTML = "Percentage " + percentage +"%";
+        } 
+        
+    </script>
+
+</body>
+</html>
