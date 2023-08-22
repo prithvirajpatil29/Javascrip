@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <script>
+        function sum(a,b)
+        {
+            return a + b;
+        }
+        document.write(`Sum = ${sum(10,20)}<br>`);
+
+        //Function Expression
+        document.write("<h3>Function Expression <br>")
+        let fullname = function(firstName,lastName){
+            return firstName + lastName;
+        };
+        document.write(fullname("appu", "patil"));
+        document.write("<hr>");
+        document.write("Arrow Function <br>");
+  
+
+        let js = () => {
+            document.write("Thi is a Arrow Function<br>");
+        }
+        js();
+        let rem = (a,b) => {
+            return a%b;
+        }
+        document.write(rem(10,2));
+    </script>
+    
+</body>
+</html>
