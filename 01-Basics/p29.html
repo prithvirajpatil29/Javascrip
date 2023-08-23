@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>SCOPE</h1>
+    </center>
+    <hr>
+    <script>
+        // var is weeker signal and always have global scope
+        // let and const are block scope variables
+        let x = 15;
+        if(x>10)
+        {
+            var a = 100;
+            let b = 20;
+            const c = 30;
+            document.write("a = ",a,"<br>");
+            document.write("b = ",b,"<br>");
+            document.write("c = ",c,"<br>");
+        }
+        document.write("a = ",x,"<br>");
+        document.write("b = ",b,"<br>");
+        document.write("c = ",c,"<br>");
+    </script>
+</body>
+</html>
