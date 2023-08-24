@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <h3>Remainder of 2 numbers</h3>
+    <button onclick="calc()">Click to calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+        function calc()
+        {
+            let num1 = window.prompt("enter number 1");
+            let num2 = prompt("enter number 2");
+            let result = Number(num1) % Number(num2);
+            document.getElementById("result").innerHTML = "Remainder of 2 numbers is " + result;
+        }
+    </script>
+</body>
+</html>

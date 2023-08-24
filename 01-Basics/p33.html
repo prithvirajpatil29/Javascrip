@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>DataType Conversion</h1>
+    </center>
+    <hr>
+
+    <script>
+        let str = "123";
+        document.write('<h3>',typeof(str), "<br>");
+        let num = Number(str);
+        document.write(typeof num,"<br>");
+
+        var x = "123.123";
+        var y = "1234.1234343453";
+        var z = 'Apple';
+        document.write(typeof(x), "<br>");
+        document.write(typeof(y), "<br>");
+        document.write(typeof(z), "<br>");
+
+        var a = Number(x);
+        document.write(a, "<br>");
+
+        var a1 = parseInt(x);
+        document.write(a1, "<br>");
+
+        var a2 = parseFloat(x);
+        var a3 = parseFloat(y);
+        document.write(a2, "<br>");
+        document.write(a3, "<br>");
+
+        let yy = 1245.46856576575675;
+        document.write(yy, "<br>");
+        document.write(yy.toFixed(), "<br>");
+        document.write(yy.toFixed(1), "<br>");
+        document.write(yy.toFixed(2), "<br>");
+        document.write(yy.toFixed(3), "<br>");
+        document.write(yy.toFixed(4), "<br>");
+        document.write(yy.toFixed(5), "<br>");
+
+        Number(true); //return 1
+        Number(false); //return 0
+        Number(nulll); // return 0
+        Number(" 123 "); //return 0
+        Number(" "); // return 0
+        Number(""); // return 0
+        Number("123e-1"); //return 12.3
+        Number("0xFF"); // return 255 (hexadecimal)
+        Number("undefined"); // return Nan -> Not a Number
+        Number("null"); // return Nan
+        Number("Hello World!"); //return Nan
+
+    </script>
+</body>
+</html>
