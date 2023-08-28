@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-BASICS</title>
+    </head>
+    <body>
+        <center>
+            <h1>Array using constructor</h1>
+        </center>
+        <hr>
+        <script>
+            var x = new Array();
+            
+            document.write(Array,"<br>");
+            document.write(typeof(Array),"<br>");
+            document.write(x,"<br>");
+            document.write(typeof(x),"<br>");
+
+            x[0] = "prithviraj";
+            x[1] = "amoght";
+            x[2] = "prawj";
+            x[3] = "ppp";
+
+            /*
+                array tranverse using for each 
+                array.foreach(function(param)){
+                    //param => index
+                }
+                array.foreach(function(param){
+                    param = >index
+                })
+            */
+
+            document.write("<h2>array tranverse using for each </h2>");
+            x.forEach(function(element)
+            {
+                document.write(element,"<br>");
+            })
+            x.forEach((element) =>
+            document.write(element,"<br>"))
+            ;
+
+            
+            
+            for(i=0;i<x.length;i++)
+            {
+                document.write(x[i],"<br>");
+            }
+            i=0;
+            while(i < x.length)
+            {
+                document.write(x[i],"<br>");
+                i++
+            }
+                
+            i=0;
+            do{
+                document.write(x[i],"<br>");
+                i++
+            }while(i<x.length);
+
+        </script>
+    </body>
+</html>

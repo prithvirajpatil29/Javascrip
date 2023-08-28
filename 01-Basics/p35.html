@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-BASICS</title>
+    </head>
+    <body>
+        <center>
+            <h1>Nan => Not a Number</h1>
+        </center>
+        <script>
+            var a = "123a";
+
+            document.write(`<h3> ${a} <br>`);
+            document.write(`<h3> ${Number(a)} <br>`);
+            document.write(`<h3> ${parseInt(a)} <br>`);
+        
+            document.write(`<h3> ${isNaN(124)} <br>`);
+            document.write(`<h3> ${isNaN("12a")} <br>`);
+            document.write(`<h3> ${isNaN("")} <br>`);
+            document.write(`<h3> ${isNaN("201/123/23")} <br>`);
+            document.write(`<h3> ${isNaN(0/0)} <br>`);
+            document.write(`<h3> ${isNaN(Number("21"))} <br>`);
+            
+            </script>
+    </body>
+</html>
