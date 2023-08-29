@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>Object Array</h1>
+        </center>
+        <hr>
+        <script>
+            let user = [
+                {
+                    id : 1,
+                    name : "prithviraj",
+                    age : 22
+                },
+                {
+                    id : 2,
+                    name : "appu",
+                    age : 21
+                },
+                {
+                    id : 3,
+                    name : "prajwal",
+                    age : 28
+                }
+            ];
+            for(i=0;i<user.length;i++)
+            {
+                document.write(`users id =  ${user[i].id} `);
+                document.write(`users name =  ${user[i].name}    `);
+                document.write(`users age =  ${user[i].age} <br>`);
+            }
+            
+            user.forEach(element => {
+                document.write(`users id =  ${element.id}`);
+                document.write(`users name =  ${element.name}`);
+                document.write(`users age =  ${element.age} <br>`);
+            })
+            user.forEach(function(item){
+                document.write(`users id =  ${item.id}`);
+                document.write(`users name =  ${item.name}`);
+                document.write(`users age =  ${item.age} <br>`);
+            })
+
+        </script>
+    </body>
+</html>
