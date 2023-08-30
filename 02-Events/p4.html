@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+</head>
+<body>
+    <center>
+        <h1>MOUSE EVENT</h1>
+    </center>
+    <hr>
+    <h3 id="txt" onmouseenter="Handler()" onmouseleave="removeHandler()">
+        Hover your mouse pointer
+    </h3>
+    <script>
+        function Handler()
+        {
+            document.getElementById("txt").style.backgroundColor = "teal";
+            document.getElementById("txt").style.padding = "20px";
+            document.getElementById("txt").style.color = "#fff";
+        }
+        function removeHandler()
+        {
+            document.getElementById("txt").style.backgroundColor = "";
+            document.getElementById("txt").style.padding = "";
+            document.getElementById("txt").style.color = "";
+        }
+    </script>
+</body>
+</html>
