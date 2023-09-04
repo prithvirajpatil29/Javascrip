@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CALCULATOR</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media.css">
+    </head>
+    <body>
+        <section>
+            
+            <h1>Calculator</h1>
+            <input type="text" id="number" placeholder="Result">
+           
+        <table>
+             <tr>
+                <td><button onclick="buttonValue('7')">7</button></td>
+                <td><button onclick="buttonValue('8')">8</button></td>
+                <td><button onclick="buttonValue('9')">9</button></td>
+                <td><button onclick="buttonValue('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="buttonValue('4')">4</button></td>
+                <td><button onclick="buttonValue('5')">5</button></td>
+                <td><button onclick="buttonValue('6')">6</button></td>
+                <td><button onclick="buttonValue('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="buttonValue('1')">1</button></td>
+                <td><button onclick="buttonValue('2')">2</button></td>
+                <td><button onclick="buttonValue('3')">3</button></td>
+                <td><button onclick="buttonValue('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="buttonValue('.')">.</button></td>
+                <td colspan="2" onclick="buttonValue('0')"><button>0</button></td>
+                <td><button onclick="buttonValue('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="buttonValue('%')">%</button></td>
+                <td colspan="2" onclick="clearResult()"><button>Clear</button></td>
+                <td><button onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+    </section>
+    </body>
+    
+    <script>
+        function buttonValue(value)
+        {
+            const inputField = document.getElementById("number");
+            inputField.value += value;
+        }
+        function clearResult() {
+            const inputField = document.getElementById("number");
+            inputField.value = "";
+        }
+        function calculate()
+        {
+            const inputField = document.getElementById("number");
+            const expression = inputField.value;
+            const result = eval(expression);
+            inputField.value = result;
+        }
+
+    </script>
+</html>
