@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    <center>
+        <h1>ARRAY</h1>
+        <p>Collection of data.</p>
+    </center>
+    <hr>
+    <h2>By Array Literal</h2>
+    <hr>
+    <script>
+        let fruits = ['apple',"banana",'orange','papya',1000];
+        document.write(typeof(fruits),"<br>");
+        document.write(fruits,"<br>");
+        document.write("Lenght of fruits array ",fruits.length,"<br>");
+        for(i=0;i<fruits.length;i++)
+        {
+            document.write(fruits[i]," ");
+        }
+    </script>
+    <hr>
+    <center>
+        <h1>By creating instance of Array Object or Constructor directly (using new keyword)</h1>
+
+    </center>
+    <hr>
+    <script>
+        let employee = new Array();
+        employee[0] = "prithviraj";
+        employee[1] = "prajwal";
+        employee[2] = "manjua";
+        employee[3] = "amogh";
+        employee[4] = "akash";
+        for(i=0;i<employee.length;i++)
+        {
+            document.write(employee[i]," ");
+        }
+    </script>
+    <hr>
+    <center>
+        <h1>By using an Array object constructoe parameter(using new ketword)</h1>
+    </center>
+    <hr>
+    <script>
+        let studentinfo = new Array("ak","bk","ck","dk");
+        for(i=0;i<employee.length;i++)
+        {
+            document.write(studentinfo[i]," ");
+        }
+    </script>
+</body>
+</html>
