@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .test{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p class="test">This is a pragraph</p>
+    <h1 class="test">This is a paragraph</h1>
+
+    <script>
+        let matches = document.getElementsByClassName("test");
+        document.write(`${matches}`);
+        console.log(matches);
+        for(const key in matches){
+            matches[key].style.backgroundColor = "yellow";
+            matches[key].style.color = "red";
+        }
+
+    </script>
+</body>
+</html>

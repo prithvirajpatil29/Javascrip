@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <section id="blk"></section>
+    <hr>
+    <button onclick="addaContent()">Add Block</button>
+    <button onclick="removeContent()">Remove Block</button>
+    <h3 id="result"></h3>
+    <script>
+        function addaContent()
+        {
+            //document.getElementById("result").innerHTML = "Add Content";
+            let content = `
+                <h1>Welcome to DOM</h1>
+                <h3>Sub title of js </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad asperiores cumque placeat libero magni autem corrupti doloribus. Enim ad error, sequi magni odit corporis asperiores eveniet repudiandae atque velit dolore.</p>
+                <button onclick="removeContent()">Remove Block</button>
+            `;
+            document.getElementById("blk").innerHTML = content;
+        }
+        function removeContent()
+        {
+            //document.getElementById("result").innerHTML = "Remove Content";
+            document.getElementById("blk").innerHTML = "";
+            
+        }
+    </script>
+</body>
+</html>
