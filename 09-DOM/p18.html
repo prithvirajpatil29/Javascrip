@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="viewCookie()">View Cookie</button>
+    <button onclick="resetCookie()">Reset Cookie</button>
+    <h3 id="output"></h3>
+    <script>
+        function setCookie(){
+            let name = "prithviraj patil";
+            document.cookie = `User Name = ${name}; expires = Tue Sep 12 2023 14:19:45; secure = true`;
+        }
+        function viewCookie(){
+            if(document.cookie.length != 0){
+                alert(document.cookie);
+            }
+            else{
+                alert("cookies not present");
+            }
+        }
+        function resetCookie(){
+            if(document.cookie = 'User Name = prithviraj patil'){
+                alert('cookie presen');
+                window.location.reload();
+            }
+
+        }
+    </script>
+</body>
+</html>
