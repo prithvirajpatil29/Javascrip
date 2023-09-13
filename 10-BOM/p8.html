@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <center>
+        <h1>BOM open and close</h1>
+    </center>
+    <hr>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <script>
+        let myWindows;
+        let WindowsProps = "width=300,height=300,top=200,left=300,toolbar=yes,scrollable=yes,resizable=yes";
+        function openWindow()
+        {
+            myWindows = window.open("https://regex101.com/","",WindowsProps);
+        }
+        function closeWindow()
+        {
+            myWindows.close("https://regex101.com/");
+        }
+    </script>
+</body>
+</html>

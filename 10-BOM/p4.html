@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <center>
+        <h1>BOM</h1>
+    </center>
+    <hr>
+    <button onclick="getViews()">getViews</button>
+    <button onclick="goforward()">goforward</button>
+    <a href="p5.html">p5.html</a>
+    <script>
+        function getViews()
+        {
+            alert("You accessed" + history.length + "web page in this session");
+        }
+        function goforward()
+        {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>
