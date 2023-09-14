@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>By using an object constructor (constructor parameter)</h1>
+    </center>
+    <hr>
+    <h3>Example-1</h3>
+    <script>
+        let empDetails = new Object({firstName : "prithviraj",lastName:"patil",fullName: function(){return this.firstName+" "+this.lastName}});
+        document.write(empDetails.firstName,"<br>");
+        document.write(empDetails.lastName,"<br>");
+        document.write(empDetails.fullName(),"<br>");
+
+    </script>
+</body>
+</html>

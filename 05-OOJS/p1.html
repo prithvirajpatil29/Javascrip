@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>JAVASCRIPT OBJECT</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>
+            Literal type(single)
+            <ul>
+                <li>Object Literal</li>
+                <li>Creating instance of object directly (using constructor method)</li>
+                <li>Using an object constructor (using constructor parameter)</li>
+            </ul>
+        </li>
+        <li>Object Array</li>
+        <li>JSON (Javascript Object Notation) Array (Response of REST [RepresentationL State transfer]) API</li>
+    </ol>
+    <hr>
+    <center>
+        <h1>Literal Object</h1>
+        <p>key:value => property of an object</p>
+    </center>
+    <p><strong>SYNTAX</strong></p>
+    <pre>
+        let literalObjectName = {
+            key1 : "values";
+            key2 : "values";
+            key3 : "values";
+        }
+        console.log(literalObjectName);
+        console.log(type(literalObjectName));
+        console.log(literalObjectName.key1);
+    </pre>
+    <hr>
+    <script>
+        let tes = "Hello";
+        document.write(`<h3>Typeof test = ${tes}</h3><br>`);
+
+        let car = {
+            model : "2023",
+            color : "orange",
+            brand : "s3",
+            "company" : "tesla"
+        };
+        document.write("<h2> Car Model is = ",car.model,"</h2>");
+        document.write("<h2> Car color is = ",car.color,"</h2>");
+        document.write("<h2> Car Company is = ",car.company,"</h2>");
+
+
+    </script>
+</body>
+</html>

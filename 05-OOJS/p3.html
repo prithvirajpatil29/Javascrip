@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>By creating instance of object directly(using new keyword)</h1>
+    </center>
+    <hr>
+    <strong>SYNTAX :</strong>
+    <pre>
+        let objectName = new constructorName();
+    </pre>
+    <script>
+        let empDetails = new Object();
+        document.write(typeof empDetails,"<br>");
+        empDetails.firstname = "appu";
+        empDetails.lastname = "patil";
+        empDetails.fullName = function(){
+            return this.firstname+" " + this.lastname;
+        }
+        document.write(empDetails.firstname,"<br>");
+        document.write(empDetails.lastname,"<br>");
+        document.write(empDetails.fullName(),"<br>");
+
+
+    </script>
+</body>
+</html>

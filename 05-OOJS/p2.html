@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Functions, array and objects as properties</h1>
+    </center>
+    <hr>
+    <script>
+        let user = {
+            name : "prithviraj",
+            email : "prithviraj@gmail.com",
+            hobbies:['playing','singing'],
+            getName : function(){
+                return this.name;
+            },
+            getEmail : () =>{
+                //in arrow function you cannot use this keyword
+                return email;
+            },
+            address :{
+                city : "bengaluru",
+                pincode: 938493
+            }
+        };
+        document.write(user.getName());
+        //we cannot use arrow function in object
+        //document.write(user.getEmail());
+        document.write(user['address']['pincode']);
+
+
+    </script>
+</body>
+</html>
