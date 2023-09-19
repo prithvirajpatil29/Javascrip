@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Object Properties using loop</h1>
+    </center>
+    <hr>
+    <script>
+        const user = {
+            name : "Prithviraj",
+            email : "prthvk@gmail.com",
+            mobile : 938323893,
+            age : 22
+        }
+        console.log(user.age);
+        console.log(user['age']);
+        for(let item in user){
+            document.write(`${item}: ${user[item]}<br>`);
+        }
+    </script>
+</body>
+</html>
