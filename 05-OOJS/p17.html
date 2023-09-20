@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Object.freeze()</h1>
+    </center>
+    <hr>
+    <script>
+       var user = {
+        name : "prithviraj",
+        email : "prithvir@gmail.com",
+        mobile : 938499283
+       };
+       Object.defineProperty(user, "age",{
+           value:24,
+           writable : true        
+       });
+       console.log(user);
+
+       Object.freeze(user);
+       user.name = "appu";
+       user.email = "appu@gmail.com";
+       console.log(user);
+    </script>
+</body>
+</html>
