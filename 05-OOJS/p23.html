@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+        <p>Prototype Keyword - is used to create a property to an Constructor externally</p>
+    </center>
+    <hr>
+    <script>
+        function student(){
+            //local property
+            let name, gender;
+
+            //contructor property
+            this.name = "HTML";
+            this.gender = "Male";
+        }
+        let stu = new student();
+        console.log(stu.name);
+        console.log(stu.gender);
+
+        console.log(student.age);
+
+        student.prototype.age1 = 30;
+
+        let student1 = new student();
+        console.log(student1.age1);
+
+        let student2 = new student();
+        console.log(student2.age1);
+    </script>
+</body>
+</html>

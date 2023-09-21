@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>CLASS ES-6</h1>
+    </center>
+    <hr><h3>Class syntax contains two components</h3>
+    <ol>
+        <li>Class Declarations</li>
+        <li>Class Expressions</li>
+    </ol>
+    <hr>
+    <script>
+        document.write(`<h1>Class Declaaration</h1>`);
+        class User{
+            constructor(){
+                this.name = "prithviraj";
+                this.eamil = "prithviraj@gmail.com"
+            }
+            display(){
+                document.write(`<h1> name is ${this.name}</h1>`)
+                let x = 100;
+                document.write(`<h1> x is ${x}</h1>`)
+            }
+
+            print(){
+                document.write(`<h1> email is ${this.eamil}</h1>`)
+            }
+        }
+        let y = new User();
+        console.log(y.name);
+        console.log(y.eamil);
+        document.write(`<h1> name is ${y.name}</h1>`)
+        document.write(`<h1> email is ${y.eamil}</h1>`)
+        y.display();
+        y.print();
+    </script>
+</body>
+</html>

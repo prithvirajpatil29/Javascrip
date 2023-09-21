@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Object based inheritance (inheritance chain)</h1>
+    </center>
+    <hr>
+    <script>
+        let user = {
+            name : 'Appu',
+            email : 'appu@gmail.com',
+        };
+        let user1 = Object.create(user,{
+            mobile : {
+                value : "9900464179",
+            },
+            age : {
+                value : 22,
+            }
+        });
+
+        let user2 = Object.create(user1,{
+            course : {
+                value : "MERN",
+            },
+            duration : {
+                value : "1.3 month"
+            }
+        });
+        console.log(user2);
+        console.log(user2.name);
+        console.log(user2.email);
+        console.log(user2.age);
+        console.log(user2.course);
+        console.log(user2.duration);
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Class - ES-6</h1>
+    </center>
+    <hr>
+    <script>
+        //class => group of objects
+        //objects => group of state (variables) and behaivors (methods)
+
+        class User{
+            constructor(){
+                this.name = "appu";
+                this.email = "appu@gmail.com";
+                this.fruits = ['apple','orange','banana'];
+                this.employee = {
+                    fullName : 'appu patil',
+                    bank : 'sbi'
+                }
+            }
+            getEmail(){
+                document.write(`<h1>Email : ${this.email}`);
+            }
+            getFruits(){
+                return this.fruits;
+            }
+        }
+
+        let x = new User();
+        console.log(x.fruits);
+        console.log(x.getFruits());
+        //document.write(x.getFruits());
+        x.fruits.forEach(function(item,index){
+            document.write(item," ");
+        });
+        console.log(x.employee.bank);
+        console.log(x.employee.fullName);
+        x.getEmail();
+        x.getFruits();
+    </script>
+</body>
+</html>
