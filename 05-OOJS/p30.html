@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <script>
+        class sum{
+            constructor(x,y){
+                this.a = x;
+                this.b = y;
+            }
+            getSum(){
+                return this.a + this.b;
+            }
+        }
+        const calculate = new sum(10,20);
+        const calculate1 = new sum(20,30);
+        calculate.getSum();
+        console.log(calculate.getSum());
+        console.log(calculate1.getSum());
+    </script>
+</body>
+</html>

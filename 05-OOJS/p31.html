@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Class ES-6</h1>
+    </center>
+    <hr>
+        <label for="Enter Number">Enter Number : </label>
+        <input type="text" name="" id="number">
+        <input type="submit" id="submit"   value="Submit">
+        <h3 id="result"></h3>
+    <script>
+        const submit = document.getElementById('submit')
+
+        submit.addEventListener('click',function(){
+            class calculate{
+                constructor(){
+                    var number = Number(document.getElementById('number').value);
+                    var result = document.getElementById('result')
+                    if(number > 0){
+                        if(number % 2 == 0){
+                            result.innerHTML = number + " is " + "Even";
+                        }
+                        else{
+                            result.innerHTML = number + " is " + "ODD";
+                        }
+                    }
+                    else{
+                        result.innerHTML = "Number should be greater than zero";
+                    }
+                }
+            }
+            var calc = new calculate();
+        })
+    </script>
+</body>
+</html>
