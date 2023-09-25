@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Static Methods</h1>
+    </center>
+    <hr>
+    <script>
+        class Course{
+            constructor(title,dur){
+                document.write('<h3>Constructor called</h3>');
+                
+                document.write(`<h3>Title : ${this.title }</h3>`);
+                document.write(`<h3>Duration : ${this.dur}</h3>`);
+                document.write(`<h3>Title : ${this.title = title}</h3>`);
+                document.write(`<h3>Duration : ${this.dur = dur}</h3>`);
+            }
+            //static method
+            static getCourse(title,dur){
+                document.write(title);
+                document.write(dur);
+                document.write(`<h3>Title : ${title}</h3>`);
+                document.write(`<h3>Duration : ${dur}</h3>`);
+            
+            }
+            static getCompany(company){
+                document.write(`<h3>Company : ${company}</h3>`);
+            }
+            //non static method
+            getCoursetitleDur(){
+                document.write(`<h3>Title : ${this.title}</h3>`);
+                document.write(`<h3>Duration : ${this.dur}</h3>`);
+            }
+        }
+        var cor = new Course('MERN', '6 months');
+        Course.getCourse("mern","6months");
+        Course.getCompany('Be-practical');
+        cor.getCoursetitleDur();
+    </script>
+</body>
+</html>

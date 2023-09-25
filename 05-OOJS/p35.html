@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript Constructor Method.</h1>
+        <p>This is special type of method which is used to initialize and create an object</p>
+
+    </center>
+    <hr>
+    <h4>Points to Remember</h4>
+    <ul>
+        <li>Constructor key word is used to declare a constructor method.</li>
+        <li>The class can contain one constrictor method only</li>
+        <li>Parent class constructor through super keyword</li>
+    </ul>
+    <hr>
+    <h3>Construcotr Method Example1..!</h3>
+    <script>
+        class Employee{
+            constructor(){
+                this.id = 1;
+                this.name = "Be - practical "
+            }
+        }
+        var emp = new Employee();
+        document.write(emp.id + " " + emp.name);
+    </script>
+    <h3>Constructor Method Example2 with super keyword..!</h3>
+    <script>
+        class CompanyNmae{
+            constructor(){
+                this.comapny = "Be-practical";
+            }
+        }
+        class EmployeeComapny extends CompanyNmae{
+            constructor(id,name){
+                super();
+                this.id1 = id;
+                this.name1 = name;
+            }
+        }
+        let employeeeComp = new EmployeeComapny(33,'prithviraj');
+        document.write(`<h3>id1 : ${employeeeComp.id1}</h3>`);
+        document.write(`<h3>id1 : ${employeeeComp.name1}</h3>`);
+        document.write(`<h3>id1 : ${employeeeComp.comapny}</h3>`);
+
+    </script>
+</body>
+</html>
