@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>get and set methods</h1>
+    </center>
+    <hr>
+    <script>
+        class Car{
+            constructor(){
+                this.title;
+            }
+            get title(){
+                return `My car name is : ${this._name}`;
+            }
+            set title(tt){
+                this._name = tt;
+            }
+        }
+        let car = new Car();
+        car.title = 'Thar';
+        document.write(car.title);
+    </script>
+</body>
+</html>

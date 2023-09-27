@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Super Key</h1>
+    </center>
+    <hr>
+    <script>
+        //parent class
+        class Materials{
+            constructor(x,y){
+                this.bric = x;
+                this.cement = y;
+            }
+            getMaterialInfo(){
+                return `Matherial info bric is : ${this.bric} and cement is : ${this.cement}`
+            }
+        }
+        //base class
+        class Bulding extends Materials{
+            constructor(a,b,c){
+                super(a,b);
+                this.sand = c;
+            }
+            getMaterialInfo(){
+                document.write(`Matherial info bric is : ${this.bric} and cement is : ${this.cement}`);
+                return `Sand is : ${this.sand}`;
+            }
+        }
+        let p = new Bulding(300,20,2);
+        document.write(p.getMaterialInfo());
+    </script>
+</body>
+</html>

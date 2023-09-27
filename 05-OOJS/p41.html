@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>get and set methods</h1>
+    </center>
+    <hr>
+    <script>
+        class Person{
+            constructor(){
+                let name;
+                this.age;
+                let gender;
+            }
+            get name(){
+                return `The name is : ${this._name}`;
+            }
+            set name(name1){
+                this._name = name1;
+            }
+
+            get age(){
+                return `The age is : ${this._perage}`;
+            }
+            set age(age1){
+                this._perage = age1;
+            }
+            get gender(){
+                return `The gender is : ${this._gender}`;
+            }
+            set gender(gender1){
+                this._gender = gender1;
+            }
+        }
+        let per = new Person();
+        per.name = 'prithviraj';
+        document.write('<h2>',per.name,'</h2><br>');
+        per.age = '22';
+        document.write('<h2>',per.age,'</h2><br>');
+        per.gender = 'male';
+        document.write('<h2>',per.gender,'</h2><br>');
+    </script>
+</body>
+</html>
