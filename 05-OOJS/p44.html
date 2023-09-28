@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Dynamic method names inside class</h1>
+    </center>
+    <hr>
+    <script>
+        let META = Symbol();
+        class Car{
+            constructor(ba,mod){
+                this.brand = ba;
+                this.model = mod;
+            }
+
+            //Dynamic Method
+            [META](){
+                return {
+                    brand : this.brand,
+                    model : this.model
+                }
+            }
+        }
+        let x = new Car('Thar',2012);
+        console.log(x);
+        let result = x[META]();
+        console.log(result.brand);
+        console.log(result.model);
+
+    </script>
+</body>
+</html>

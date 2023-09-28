@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Private member inside the class</h1>
+    </center>
+    <hr>
+    <script>
+        class Company {
+            constructor(){
+                const emp = [];
+
+                this.addEmp = function(val){
+                    emp.push(val);
+                    return emp;
+                }
+
+                this.getEmp = function(){
+                    return emp.shift();
+                }
+            }
+        }
+
+        let x = new Company();
+        console.log(x);
+        x.addEmp('Prithviraj');
+        x.addEmp('appu');
+        x.addEmp('abhi');
+        console.log(x.addEmp());
+        console.log('first',x.getEmp());
+        console.log('second',x.getEmp());
+        console.log('third',x.getEmp());
+    </script>
+</body>
+</html>
