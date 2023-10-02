@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING</title>
+</head>
+<body>
+    <center>
+        <h1>STRING</h1>
+        <p>Collections of data</p>
+    </center>
+    <hr>
+    <h2>STRING LITERAL</h2>
+    <hr>
+    <script>
+        let str1 = 'PRITHVIRAJ PATIL';
+        document.write(str1,"<br>");
+        document.write(typeof(str1),"<br>");
+        document.write(str1.length,"<br>");
+        for(i=0;i<str1.length;i++){
+            document.write(str1[i],"<br>");
+        }
+    </script>
+    <hr>
+    <center>
+        <h1>By creating instance of STRING object directly (using new keyword)</h1>
+
+    </center>
+    <hr>
+    <script>
+        let str2 = new String();
+        str2[0] = 'A';
+        document.write(str2);
+        document.write(str2[0],"<br>");
+        str2 = 'Creating instance of STRING object directly';
+        document.write(str2,"<br>");
+    </script>
+    <hr>
+    <center>
+        <h1>By using an STRING object constructor (using new keyword)</h1>
+    </center>
+    <hr>
+    <script>
+        let str3 = new String('creating instance of STRING object directly');
+        document.write(str3);
+    </script>
+</body>
+</html>
