@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <center>
+        <h1>OBJECT</h1>
+    </center>
+    <hr>
+    <script>
+        function sample(params){
+
+        }
+        let x = []; //Array
+        let y = {}; //Object
+    </script>
+    <script>
+        var user = {
+            name : 'Raj',
+            email : 'raj@gmail.com',
+            age : 33, 
+            hobbies : ['running','walking','skipping']
+        };
+        console.log('user = ',user);
+        document.write(`<h3> name = ${user.name}</h3>`);
+        document.write(`<h3> name = ${user['name']}</h3>`);
+
+        document.write(`<h3> name = ${user.hobbies[0]}</h3>`);
+
+        user.hobbies.forEach(hobby => {
+        document.write(`<h3> name = ${hobby}</h3>`);
+
+        })
+
+
+    </script>
+</body>
+</html>

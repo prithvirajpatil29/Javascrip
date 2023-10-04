@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <center>
+        <h1>Custom Constructor</h1>
+    </center>
+    <hr>
+    <script>
+        function Car()
+        {
+            let a = 10;
+            this.x = 12;
+            this.title = 'Jeep';
+            this.model = "2021";
+            this.fuel = "petrol";
+            //this.display() = function(){
+              //  document.write("Display function")
+            //}
+        }
+        var a = new Car();
+        document.write(a.title,"<br>");
+        document.write(a.model,"<br>");
+        document.write(a.fuel,"<br>");
+
+    </script>
+</body>
+</html>
