@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>ADVANCED JS</h1>
+    </center>
+    <hr>
+    <script>
+        var globalVariable = 100;
+        function whoisThis()
+        {
+            var globalVariable = 200;
+            var testVariable = 100;
+            document.write(globalVariable,"<br>");
+            document.write(testVariable,"<br>");
+            document.write(this.globalVariable,"<br>");
+            window.windowVariable = 400;
+            document.write(windowVariable,"<br>");
+        }
+        function whoIam()
+        {
+            document.write(windowVariable);
+        }
+        whoisThis(); 
+        whoIam();   
+    </script>
+</body>
+</html>
