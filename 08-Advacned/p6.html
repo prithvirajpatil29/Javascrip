@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+    <style>
+        ::selection {
+            background-color: orangered;
+            color: #FFF;
+         }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>addEventListner Method</h1>
+        <p>This method is used for manage one or more than one event</p>
+    </center>
+    <hr>
+    <button id="btn1">Function 1</button>
+    <button id="btn2">Function 2</button>
+    <button id="btn3">Function 3</button>
+    <button id="btn4">Function 4</button>
+    <script>
+        function function1()
+        {
+            alert('function 1');
+        }
+        document.getElementById('btn1').addEventListener('click',function1);
+
+        const btn2 = document.getElementById('btn2');
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>addEventListener Method</h1>
+    </center>
+    <hr>
+    <button id="btn1">Click Me</button>
+    <script>
+        let btn1 = document.getElementById('btn1');
+        function show()
+        {
+            alert('Show');
+        }
+        function bgcolor()
+        {
+            btn1.style.backgroundColor = 'gray';
+            btn1.style.color = '#fff';
+        }
+        function bgcolorblank()
+        {
+            btn1.style.backgroundColor = '';
+            btn1.style.color = '';
+        }
+        btn1.addEventListener('click',show);
+        btn1.addEventListener('mouseover',bgcolor);
+        btn1.addEventListener('mouseleave',bgcolorblank);
+
+    </script>
+</body>
+</html>
