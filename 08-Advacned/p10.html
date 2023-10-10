@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>set constructor</h1>
+    </center>
+    <hr>
+    <script>
+        let emp = new Set();
+        emp.add('Prithviraj');
+        emp.add('Abhi');
+        emp.add('Prajwal');
+        emp.add('Abhi');
+
+        console.log(emp);
+        console.log(emp.entries());
+        emp.forEach(function(item){
+            document.write(item,"<br>");
+        });
+
+        console.log(emp.has('abhi'));
+
+        //console.log(object);
+
+        emp.delete("Abhi");
+        console.log(emp);
+    </script>
+</body>
+</html>
