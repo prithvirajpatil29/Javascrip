@@ -59,5 +59,61 @@ header a:hover{
 .card a:hover{
     background-color: #fff;
     border: 2px solid #3C6789;
-    color: #3C6789;
+    color: rgb(60, 103, 137);
+}
+/* create.html */
+.userContainer{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.userForm{
+    border: 1px solid #3C6789;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    background-color: #3C6789;
+    border-radius: 10px;
+}
+.userForm>.form-group{
+    margin-bottom: 20px;
+}
+.userForm>.form-group>input{
+    padding: 5px 2px;
+    outline-color: #3C6789;
+}
+.userForm>.form-group>h1{
+    color: #fff;
+}
+.userForm>.form-group>span{
+    color: #fff;
+}
+.userForm>.form-group>label{
+    color: #fff;
+}
+.userForm>.form-group:last-child{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.userForm>.form-group>.text-center{
+    text-align: center;
+}
+.userForm>.form-group>.form-control{
+    width: 100%;
+}
+.btn{
+    padding: 10px;
+    /* border-radius: 5px; */
+    border-radius: 10px 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn:hover{
+    background-color: #3C6789;
+    border: 2px solid #fff;
+    color: #fff;
+
 }
