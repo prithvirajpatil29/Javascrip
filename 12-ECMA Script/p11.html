@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Array join => object array</h1>
+    </center>
+    <hr>
+    <script>
+        let c1 = [
+            {
+                id : 123,
+                name : 'abhi',
+                email : 'abhi@gmail.com'
+            },
+            {
+                id : 124,
+                name : 'appu',
+                email : 'abhi@gmail.com'
+            },
+        ]
+        let c2 = [
+        {
+            id : 125,
+                name : 'ppauu',
+                email : 'abhi@gmail.com'
+        },
+            {
+                ...c1
+            }
+        ]
+        console.log(c1);
+        console.log(c2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Speed (...) operator with Math Constructor</h1>
+    </center>
+    <hr>
+    <script>
+        var num = [11,2,5,7,4,67,6,7];
+        console.log(num);
+        document.write(Math.max(num),"<br>")
+        document.write(Math.min(num),"<br>")
+
+        document.write(Math.max([23,2,3,4,5]),"<br>")
+        document.write(Math.max(23,2,3,4,5),"<br>")
+        document.write(Math.max(...num),"<br>")
+
+
+
+    </script>
+</body>
+</html>

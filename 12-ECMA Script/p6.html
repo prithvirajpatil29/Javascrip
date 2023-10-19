@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Default parameters </h1>
+    </center>
+    <hr>
+    <script>
+        function sum(a,b=10){
+            document.write(a+b,'<br>');
+        }
+        sum(10,20);
+        sum(10)
+
+        function mul(c,d=2,e=3){
+            document.write(c*d*e,'<br>')
+        }
+        mul(10,2,1)
+        mul(10,2)
+        mul(2)
+    </script>
+</body>
+</html>
