@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA-SCRIPT</title>
+    </head>
+    <body>
+        <center>
+            <h1>Handling run time exception in strict Mode using try catch</h1>
+        </center>
+        <hr>
+
+        <script>
+           "use strict";
+
+           try {
+            let car = {};
+
+           Object.defineProperty(car,"model",{
+            value: 2020,
+            writable: false  
+           });
+
+           
+           console.log("before =", car);
+
+          car.model = 2021;
+
+           console.log("After = ",car);
+           } catch (error) {
+            console.log(error.message);
+           }
+
+         /*
+           During assignment of new Value to the property , the JS complier validate the writable property
+           if writable is true => re assign the value to the object property
+           if writable is false => throws run time error (in strict mode)
+        */
+         </script>
+    </body>
+</html>

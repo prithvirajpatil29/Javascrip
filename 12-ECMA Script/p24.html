@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECMA-SCRIPT</title>
+    </head>
+    <body>
+        <center>
+            <h1>Deleting Properties</h1>
+        </center>
+        <hr>
+
+        <script>
+          var x = new Object();
+          x.name ="Ignis";
+          x.model = 2020;
+          x.color ="Red";
+
+          console.log(x);
+
+          delete x.name;
+          delete x.model;
+          delete x.color; 
+          
+          console.log(x);       
+        
+        </script>
+    </body>
+</html>
