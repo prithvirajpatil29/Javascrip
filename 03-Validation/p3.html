@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Validation</title>
+</head>
+<body>
+    <center>
+        <h1>MOBILE NUMBER VALIDATION</h1>
+    </center>
+    <hr>
+    <form action="" onsubmit="validateForm(event)">
+        <label for="email">Enter Email:</label>
+        <input type="text" name="mobile" id="mobile" >
+        <input type="submit">
+        <strong id="result"></strong>
+    </form>
+    <script>
+        function validateForm(event)
+        {
+            event.preventDefault();
+            var mobile = Number(document.getElementById("mobile").value);
+            var regex = /^[6-9]\d{9}$/;
+
+            if(mobile.length === 0)
+            {
+                result.style.color = "red";
+                result.innerHTML = "Enter Email ";
+            }
+            else{
+            if (regex.test(mobile)) {
+                result.style.color = "green";
+                result.innerHTML = " valid";
+            
+            } else {
+                result.style.color = "red";
+                result.innerHTML = "Valid not";
+            }
+        }
+        }
+    </script>
+</body>
+</html>

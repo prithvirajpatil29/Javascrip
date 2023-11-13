@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Validation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <style>
+        .box{
+            display:flex;
+            margin-top: 20px;
+        }
+        .box>.container,.box>.formtable{
+            flex: 1;
+        }
+        .box>.container>form{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="container">
+    <form action="" onsubmit="return validateForm(event)">
+        <h2>Contact Form</h2>
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullName" id="fullName" >
+        <p id="resfullName"></p>
+        <label for="text">Email id</label>
+        <input type="text" name="email" id="email" >
+        <p id="resemail"></p>
+        <label for="mobile">Mobile number</label>
+        <input type="text" name="mobile" id="mobile" >
+        <p id="resmobile"></p>
+        <label for="city">City</label>
+        <select name="city" id="city" >
+            <option value="">Choose city name</option>
+            <option value="Mysuru">Mysuru</option>
+            <option value="Kalaburagi">Kalaburagi</option>
+            <option value="Bengaluru">Bengaluru</option>
+        </select>
+        <p id="rescity"></p>
+        <label for="gender">Gender</label>
+        <div class="gender">
+            <input type="radio" name="gender" value="Male" required>Male
+            <input type="radio" name="gender" value="Female">Female
+        </div>
+        <label for="languages">Languages (optional)</label>
+        <div class="languages">
+            <input type="checkbox" name="language" value="Kannada">Kannada
+            <input type="checkbox" name="language" value="English">English
+            <input type="checkbox" name="language" value="Hindi">Hindi
+            <input type="checkbox" name="language" value="Telugu">Telugu
+        </div>
+        <div class="button">
+            <input type="submit">
+            <input type="reset">
+        </div>
+    </form>
+    </div>
+<!-- <center>
+    <h3>Details of Form</h3>
+</center> -->
+    <div class="formtable">
+        <table>
+            <caption>Form Details</caption>
+            <tr>
+                <td>Full Name</td>
+                <td id="tablefullName"></td>
+            </tr>
+            <tr>
+                <td>Email id</td>
+                <td id="tableemail"></td>
+            </tr>
+            <tr>
+                <td>Mobile number</td>
+                <td id="tablemobile"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td id="tablecity"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="tablegender"></td>
+            </tr>
+            <tr>
+                <td>Languages</td>
+                <td id="tablelanguages"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            var emailregex = /^\S+@\S+\.\S+$/;
+            var email = document.getElementById("email").value;
+            var resemail = document.getElementById("resemail");
+            var mobileregex = /^[7-9][0-9]{9}$/;
+            var mobile = document.getElementById("mobile").value;
+            var resmobile = document.getElementById("resmobile");
+            var fullName = document.getElementById("fullName").value;
+            var fullNameregex = /^[A-Za-z\s\-]+$/;
+            var resfullName = document.getElementById("resfullName");
+            var city = document.getElementById("city").value;
+            var rescity = document.getElementById("rescity");
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var languages = document.querySelectorAll('input[name="language"]:checked');
+            if (fullName.trim().split(' ').length > 2) {
+                resfullName.style.color = "red";
+                resfullName.innerHTML = "Full name should not contain more than one space";
+                return false;
+            }
+            if (fullName.trim() === "") {
+                resfullName.style.color = "red";
+                resfullName.innerHTML = "Please enter your full name";
+                return false; 
+            } else if (fullNameregex.test(fullName) === false) {
+                resfullName.style.color = "red";
+                resfullName.innerHTML = "Please enter a valid full name (only alphabets, spaces, and hyphens)";
+                return false;
+            } else if (fullName.length < 5) {
+                resfullName.style.color = "red";
+                resfullName.innerHTML = "Full name must be at least 5 characters long";
+                return false;
+            } else {
+                resfullName.style.color = "green";
+                resfullName.innerHTML = "Valid Full Name"; 
+            }
+            document.getElementById("tablefullName").textContent = fullName;
+            if (email.length === 0) {
+                resemail.style.color = "red";
+                resemail.innerHTML = "Please enter an email";
+                return false; 
+            } else if (emailregex.test(email) === false) {
+                resemail.style.color = "red"; 
+                resemail.innerHTML = "Please enter a valid email";
+                return false; 
+            } else {
+                resemail.style.color = "green"; 
+                resemail.innerHTML = "Valid email";
+            }
+            document.getElementById("tableemail").textContent = email;
+
+            
+            if (mobile.length === 0) {
+                resmobile.style.color = "red";
+                resmobile.innerHTML = "Enter Mobile Number";
+                return false; 
+            } else if (mobileregex.test(mobile) === false) {
+                resmobile.style.color = "red";
+                resmobile.innerHTML = "Please enter a valid mobile number";
+                return false; 
+            } else {
+                resmobile.style.color = "green"; 
+                resmobile.innerHTML = "Valid mobile number";
+            }
+            document.getElementById("tablemobile").textContent = mobile;
+
+
+            if (city === "") {
+                rescity.style.color = "red";
+                rescity.innerHTML = "Please select a city";
+                return false; 
+            } else {
+                rescity.style.color = "green";
+                rescity.innerHTML = "Valid City Name";
+            }
+            document.getElementById("tablecity").textContent = city;
+
+            document.getElementById("tablegender").textContent = gender ? gender.value : "N/A";
+
+            var selectedLanguages = Array.from(languages).map(function(language) {
+                return language.value;
+            });
+    
+            document.getElementById("tablelanguages").textContent = selectedLanguages.join(", ");
+    
+        
+        }
+    </script>
+</body>
+</html>
